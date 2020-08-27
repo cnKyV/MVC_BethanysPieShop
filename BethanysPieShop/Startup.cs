@@ -26,6 +26,7 @@ namespace BethanysPieShop
         {
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(dbcontext => 
             dbcontext.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
